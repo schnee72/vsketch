@@ -48,6 +48,37 @@ $ python3 -m venv venv
 $ source venv/bin/activate
 ```
 
+If on a M1 Mac, first install python 3.9 from macports:
+
+```
+sudo port install python39 py39-shapely py39-scipy py39-numpy py39-pyside2
+```
+
+Then create venv with:
+
+```
+/opt/local/bin/python3.9 -m venv vpype_venv --system-site-packages
+```
+
+Then activate with:
+
+```
+source vpype_venv/bin/activate
+```
+
+Then install vype:
+
+```
+pip install "vpype[all]"
+```
+
+Then install with:
+
+```
+BEZIER_NO_EXTENSION=true pip install git+https://github.com/abey79/vsketch#egg=vsketch
+```
+That will get vsketch working on an M1 Mac.
+
 Install *vsketch*:
 
 ```bash
